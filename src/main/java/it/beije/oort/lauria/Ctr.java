@@ -1,4 +1,4 @@
-package it.beihe.oort.lauria;
+package it.beije.oort.lauria;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,18 +19,24 @@ public class Ctr {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/singIn", method = RequestMethod.GET)
-	public String singIn() {
-		log.info("singIn get...");
+	@RequestMapping(value = "/signIn", method = RequestMethod.GET)
+	public String signIn() {
+		log.info("signIn get...");
 		
-		return "singIn";
+		return "signIn";
 	}
 
-	@RequestMapping(value = "/singUn", method = RequestMethod.GET)
-	public String singUn() {
-		log.info("singUn get...");
+	@RequestMapping(value = "/signUp", method = RequestMethod.GET)
+	public String signUp() {
+		log.info("signUn get...");
 		
-		return "singUn";
+		return "signUp";
+	}
+	@RequestMapping(value = "/prova", method = RequestMethod.GET)
+	public String prova() {
+		log.info("signUn get...");
+		
+		return "prova";
 	}
 
 }
