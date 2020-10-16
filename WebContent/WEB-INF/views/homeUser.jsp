@@ -32,7 +32,11 @@ if (userBean == null) {
 <!-- 		<p style="text-align:side;"><a href="./settings">Settings</a></p> <p style="text-align:right;"><a href="./home">Logout</a></p>
  -->	
  <div style="text-align:center;">	
-		<a class="btn btn-primary" href="./settings" role="button">Settings</a></br>
+		<a class="btn btn-primary" href="./settings" role="button">Settings</a><br/>
+		
+		<a class="btn btn-outline-dark" href="./addtrack" role="button">Add Track</a><br/>
+		
+		<a class="btn btn-outline-dark" href="./tracks" role="button">Your tracks</a><br/>
 		
 		<a class="btn btn-outline-dark" href="./home" role="button">Logout</a>
 </div>

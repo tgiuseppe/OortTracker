@@ -1,4 +1,4 @@
-package it.beije.oort.controller;
+package it.beije.oort.lauria;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
