@@ -23,9 +23,9 @@ public class Ctr {
 	private UserService userService;
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public String home() {
+	public String home( HttpServletRequest request) {
 		log.info("home get...");
-		
+		request.getSession().invalidate();
 		return "home";
 	}
 	
