@@ -42,6 +42,6 @@
 	</c:if>
 	
 	
-	<br><a href="./homeUser">HOME</a>
+	<br><a class="btn btn-primary" role="button" href="./homeUser">HOME</a>
 </body>
 </html>

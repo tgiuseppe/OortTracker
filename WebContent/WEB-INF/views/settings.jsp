@@ -37,13 +37,13 @@
 		</c:if>
 	 
 	 
-	 <a href="./modifyPsw">Password</a></br>
+	 <a class="btn btn-primary" role="button" href="./modifyPsw">Change your password</a></br>
 <!-- 	 <form action="./modifyPsw" method="POST" >
 	  <label for="password">Password:</label>
 	  <input type="password" name="password" value=""><br>
 	 </form>
  -->	  
 	
-<a href="./homeUser">HOME</a>
+<a class="btn btn-outline-primary" role="button" href="./homeUser">HOME</a>
 </body>
 </html>
