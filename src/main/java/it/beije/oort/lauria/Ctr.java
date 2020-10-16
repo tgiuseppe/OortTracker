@@ -145,15 +145,16 @@ public class Ctr {
 		
 		Long idUser = user.getId();
 		
-		String password = request.getParameter("password");
-		
+		String oldPassword = request.getParameter("password");
+		String newPassword = request.getParameter("newpassword");
 		
 		try {
-			if(userService.checkPassword(idUser, password)) {
-				model.addAttribute("checkPswOk", "You can insert your new password!");
+			if(userService.checkPassword(idUser, oldPassword)) {
+				userService.modifyPassword(idUser, newPassword);
+				model.addAttribute("checkPswOk", "Changes done!");
 				return "modifyPsw";
 			}else {
-				model.addAttribute("checkPswKo", "you entered the wrong password!");
+				model.addAttribute("checkPswKo", "you entered the wrong  old password!");
 				return "modifyPsw";
 			}
 		}catch(IllegalArgumentException e) {
