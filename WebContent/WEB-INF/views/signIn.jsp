@@ -15,12 +15,15 @@
 <title>Oort Tracker</title>
 </head>
 <body>
+<c:if test = "${errore != null}">
+    <b>${errore}</b></br>
+</c:if>
 
 	<h1 style="text-align:center;"><em>Login<em></em></h1>
 	<h3>Enter your credentials</h3>
 		
 		<form action="./signIn" method="POST">
-			NICKNAME&nbsp;<input type="text" name="text" value="" /><br/>
+			NICKNAME&nbsp;<input type="text" name="nickname" value="" /><br/>
  			PASSWORD&nbsp;<input type="password" name="password" value="" /><br>
 			<input type="submit" value="SIGN IN"/>
 		</form>

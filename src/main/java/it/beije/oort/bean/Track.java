@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "track")
+@Table(name = "tracks")
 public class Track implements TrackerBean {
 	
 	@Id
@@ -19,7 +19,7 @@ public class Track implements TrackerBean {
 	private Long id;
 	
 	@Column(name = "id_user")
-	private String idUser;
+	private Long idUser;
 	
 	@Column(name = "start_address")
 	private String startAddress;
@@ -34,7 +34,7 @@ public class Track implements TrackerBean {
 	private Date endDatetime;
 	
 	@Column(name = "id_mode")
-	private String idMode;
+	private Long idMode;
 	
 	public Long getId() {
 		return id;
@@ -44,11 +44,11 @@ public class Track implements TrackerBean {
 		this.id = id;
 	}
 
-	public String getIdUser() {
+	public Long getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 
@@ -84,11 +84,11 @@ public class Track implements TrackerBean {
 		this.endDatetime = endDatetime;
 	}
 
-	public String getIdMode() {
+	public Long getIdMode() {
 		return idMode;
 	}
 
-	public void setIdMode(String idMode) {
+	public void setIdMode(Long idMode) {
 		this.idMode = idMode;
 	}
 

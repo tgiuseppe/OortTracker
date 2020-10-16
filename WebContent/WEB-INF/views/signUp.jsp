@@ -4,6 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	.msg {
+		color: red;
+		font-size: 20pt;
+		margin-top: 10px;
+	}
+</style>
 
     <!-- Required meta tags -->
 	<meta charset="ISO-8859-1">
@@ -19,7 +26,7 @@
 	<h1 style="text-align:center;"><em>Sign up</em></h1>
 	<h3>Enter your credentials</h3>
 	
-	<form action="./signUp" method="POST">
+	<form action="./signUp" method="POST" onsubmit="return checkUp(this)">
 	
 	  <label for="nickname">Nickname:</label>
 	  <input type="text" id="nickname" name="nickname" value=""><br>
@@ -32,4 +39,17 @@
 	</form>	
 
 </body>
+
+<script>
+
+function checkUp(formEl){
+	if (formEl.nickname.value && formEl.password.value) return true;
+	else {
+		document.getElementById('msgLogin').innerHTML="CREDENZIALI INCOMPLETE";
+		return false;	
+	}
+}
+
+</script>
+
 </html>

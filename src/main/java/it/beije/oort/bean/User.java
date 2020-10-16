@@ -19,8 +19,8 @@ public class User implements TrackerBean {
 	@Column(name = "nickname")
 	private String nickname;
 	
-	@Column(name = "mail")
-	private String mail;
+	@Column(name = "email")
+	private String email;
 	
 	@Column(name = "password")
 	private String password;
@@ -39,11 +39,11 @@ public class User implements TrackerBean {
 		this.nickname = nickname;
 	}
 	
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String getPassword() {
@@ -63,11 +63,11 @@ public class User implements TrackerBean {
 			sb.append("\"").append(nickname).append("\"");
 		}
 		
-		sb.append(" - ").append("mail: ");
-		if(mail == null) {
-			sb.append(mail);
+		sb.append(" - ").append("email: ");
+		if(email == null) {
+			sb.append(email);
 		} else {
-			sb.append("\"").append(mail).append("\"");
+			sb.append("\"").append(email).append("\"");
 		}
 		
 		sb.append("]");
