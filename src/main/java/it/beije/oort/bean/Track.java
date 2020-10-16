@@ -1,6 +1,7 @@
 package it.beije.oort.bean;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "track")
+@Table(name = "tracks")
 public class Track implements TrackerBean {
 	
 	@Id
@@ -19,7 +20,7 @@ public class Track implements TrackerBean {
 	private Long id;
 	
 	@Column(name = "id_user")
-	private String idUser;
+	private Long idUser;
 	
 	@Column(name = "start_address")
 	private String startAddress;
@@ -28,13 +29,13 @@ public class Track implements TrackerBean {
 	private String endAddress;
 	
 	@Column(name = "start_datetime")
-	private Date startDatetime;
+	private Timestamp startDatetime;
 	
 	@Column(name = "end_datetime")
-	private Date endDatetime;
+	private Timestamp endDatetime;
 	
 	@Column(name = "id_mode")
-	private String idMode;
+	private Long idMode;
 	
 	public Long getId() {
 		return id;
@@ -44,11 +45,11 @@ public class Track implements TrackerBean {
 		this.id = id;
 	}
 
-	public String getIdUser() {
+	public Long getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(String idUser) {
+	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 
@@ -68,27 +69,27 @@ public class Track implements TrackerBean {
 		this.endAddress = endAddress;
 	}
 
-	public Date getStartDatetime() {
+	public Timestamp getStartDatetime() {
 		return startDatetime;
 	}
 
-	public void setStartDatetime(Date startDatetime) {
+	public void setStartDatetime(Timestamp startDatetime) {
 		this.startDatetime = startDatetime;
 	}
 
-	public Date getEndDatetime() {
+	public Timestamp getEndDatetime() {
 		return endDatetime;
 	}
 
-	public void setEndDatetime(Date endDatetime) {
+	public void setEndDatetime(Timestamp endDatetime) {
 		this.endDatetime = endDatetime;
 	}
 
-	public String getIdMode() {
+	public Long getIdMode() {
 		return idMode;
 	}
 
-	public void setIdMode(String idMode) {
+	public void setIdMode(Long idMode) {
 		this.idMode = idMode;
 	}
 

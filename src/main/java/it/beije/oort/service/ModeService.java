@@ -1,5 +1,6 @@
 package it.beije.oort.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -28,6 +29,12 @@ public class ModeService {
 		log.debug("Retrieving mode " + type);
 		Optional<Mode> mode = modeRepository.findByType(type);
 		return mode.isPresent() ? mode.get() : null;
+	}
+	
+	public List<Mode> retrieveAll() {
+		log.debug("Retrieving all modes");
+		List<Mode> listModes = modeRepository.findAll();
+		return listModes;
 	}
 	
 }
