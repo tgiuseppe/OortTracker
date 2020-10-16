@@ -40,9 +40,9 @@ public class TrackController {
 	private UserService userService;
 	
 	@RequestMapping(value = "/tracks", method = RequestMethod.GET)
-	public String tracks(Model model) {
+	public String tracks(HttpServletRequest request, Model model) {
 		String page = "/userTracks";
-		User user = userService.retrieve(1L);
+		User user = userService.retrieve(((User)request.getSession().getAttribute("userBean")).getId());
 		
 		List<Track> trackList = trackService.retrieveTracksOf(user);
 		List<Mode> modeList = modeService.retrieveAll();
